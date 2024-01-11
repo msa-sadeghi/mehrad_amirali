@@ -37,9 +37,9 @@ class Player(Sprite):
 
     def update(self,tile_map, enemy_group, game_status):
         if self.direction == 1:
-            rect = pygame.Rect(self.rect.x + 42, self.rect.y + 8, self.image.get_width()-60, self.image.get_height()-17)
+            rect = pygame.Rect(self.rect.x + 42, self.rect.y + 8, self.image.get_width()-60, self.image.get_height()-20)
         if self.direction == -1:
-            rect = pygame.Rect(self.rect.x + 20, self.rect.y + 8, self.image.get_width()-60, self.image.get_height()-17)
+            rect = pygame.Rect(self.rect.x + 20, self.rect.y + 8, self.image.get_width()-60, self.image.get_height()-20)
         
         dx = 0
         dy = 0
@@ -62,11 +62,13 @@ class Player(Sprite):
 
             self.vel_y += 1
             dy += self.vel_y
-
             for tile in tile_map:
-                if tile[1].colliderect(rect.x + dx, rect.y, self.image.get_width()-60, self.image.get_height()-17):
-                    dx = 0
-                if tile[1].colliderect(rect.x, rect.y + dy, self.image.get_width()-60, self.image.get_height()-17):
+                if tile[1].colliderect(rect.x + dx, rect.y, self.image.get_width()-60, self.image.get_height()-20):
+                    if self.direction == 1:
+                        dx = tile[1].left - rect.right
+                    elif self.direction == -1:
+                        dx = tile[1].left - rect.right
+                if tile[1].colliderect(rect.x, rect.y + dy, self.image.get_width()-60, self.image.get_height()-20):
                     if self.vel_y >= 0:
                         self.vel_y = 0
                         dy = tile[1].top - rect.bottom

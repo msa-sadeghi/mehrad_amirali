@@ -2,14 +2,16 @@ import pygame
 from constants import *
 from player import Player
 from enemy import Enemy
+from lava import Lava
 class World:
-    def __init__(self, data, player_group, enemy_group):
+    def __init__(self, data, player_group, enemy_group, lava_group):
         self.tile_map = []
         bg_img = pygame.image.load("assets/background.png")
         self.bg_img = pygame.transform.scale(bg_img, (SCREEN_WIDTH,SCREEN_HEIGHT))
         self.bg_rect = self.bg_img.get_rect(topleft=(0,0))
         self.player_group = player_group
         self.enemy_group = enemy_group
+        self.lava_group = lava_group
       
         for row in range(len(data)):
            
@@ -36,6 +38,9 @@ class World:
                 if data[row][col] == 5:
                     enemy = Enemy(col * TILE_SIZE, row*TILE_SIZE)
                     self.enemy_group.add(enemy)
+                if data[row][col] == 6:
+                    lava = Lava(col * TILE_SIZE, row*TILE_SIZE)
+                    self.lava_group.add(lava)
 
 
 
