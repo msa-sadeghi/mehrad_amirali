@@ -1,5 +1,5 @@
 import pygame
-
+pygame.init()
 
 SCREEN = pygame.display.set_mode()
 SCREEN_WIDTH = SCREEN.get_width()

@@ -8,6 +8,7 @@ class Player(Sprite):
         self.left_images = []
         self.right_idle_images = []
         self.left_idle_images = []
+        self.jump_sound = pygame.mixer.Sound("assets/img/jump.wav")
         for i in range(1, 9):
             img = pygame.image.load(f"assets/boy/Run ({i}).png")
             img = pygame.transform.scale(img, (img.get_width() * 0.2, img.get_height() * 0.2))
@@ -22,9 +23,10 @@ class Player(Sprite):
             self.right_idle_images.append(img)
             img = pygame.transform.flip(img, True, False)
             self.left_idle_images.append(img)
+        self.reset(x,y)
 
 
-
+    def reset(self, x,y):
         self.frame_index = 0
         self.image = self.right_idle_images[self.frame_index]
         self.dead_image = pygame.image.load("assets/img/ghost.png")
@@ -34,6 +36,7 @@ class Player(Sprite):
         self.direction = 1
         self.counter = 0
         self.idle = True
+        self.jumped = False
 
     def update(self,tile_map, enemy_group, game_status):
         if self.direction == 1:
@@ -45,8 +48,12 @@ class Player(Sprite):
         dy = 0
         if game_status == "playing":
             keys = pygame.key.get_pressed()
-            if keys[pygame.K_SPACE]:
+            if keys[pygame.K_SPACE] and not self.jumped:
+                self.jump_sound.play()
+                self.jumped = True
                 self.vel_y = -10
+            if not keys[pygame.K_SPACE]:
+                self.jumped = False
 
             if keys[pygame.K_LEFT]:
                 self.idle = False
