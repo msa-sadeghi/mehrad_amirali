@@ -1,0 +1,15 @@
+h1.test {
+    color: red;
+    font-size: 68px;
+    background-color: gray;
+  }
+  h1#test {
+    color: blue;
+    background-color: aquamarine;
+    font-size: 32px;
+  }
+  a {
+    color: brown;
+    font-size: 32px;
+    text-decoration: none;
+  }
