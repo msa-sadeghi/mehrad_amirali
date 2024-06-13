@@ -61,6 +61,9 @@ ul, ol, li{
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .hidden{
+        display: none;
+    }
     .col-xs-1 {width: 8.33%;}
     .col-xs-2 {width: 16.66%;}
     .col-xs-3 {width: 25%;}
@@ -86,13 +89,14 @@ ul, ol, li{
     .col-xs-offset-10 {margin-right: 83.33%;}
     .col-xs-offset-11 {margin-right: 91.66%;}
     .col-xs-offset-12 {margin-right: 100%;}
-    .hidden{
-        display: none;
-    }
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width:768px) {
+    .hidden{
+        display: none;
+    }
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
     .col-s-3 {width: 25%;}
