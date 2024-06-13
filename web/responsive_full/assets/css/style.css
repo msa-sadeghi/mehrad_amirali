@@ -1,0 +1,55 @@
+ul.menu li{
+display: inline;
+padding: 10px;
+line-height: 70px;
+}
+@font-face {
+    font-family: vazir;
+    src: url(../fonts/Vazirmatn-Light.woff2);
+}
+
+body{
+    font-family: vazir;
+    direction: rtl;
+}
+
+.container-fluid-custom{
+    background-color: rgb(1, 1, 126);
+    color: #fff;
+    height: 40px;
+}
+
+.container-fluid-custom .contact{
+    font-size: 15px;
+}
+.container-fluid-custom .contact i{
+    color: orange;
+    vertical-align: -10px;
+   
+    
+}
+.container-fluid-custom .contact span{
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    margin: 5px;
+    vertical-align: 1px;
+}
+.container-fluid-custom .social-media{
+    direction: ltr;
+}
+
+.container-fluid-custom .social-media i{
+    vertical-align: -3px;
+    margin-right: 6px;
+}
+.container-fluid-custom .social-media a{
+    color: #fff;
+    vertical-align: -7px;
+    margin-right: 3px;
+    padding: 7px;
+    width: 40px;
+}
+
+.container-fluid-custom .social-media a:hover{
+    background-color: orange;
+}
