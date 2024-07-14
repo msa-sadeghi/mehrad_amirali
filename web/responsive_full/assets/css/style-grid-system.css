@@ -42,6 +42,9 @@ ul, ol, li{
 .mb-15{
     margin-bottom: 15px;
 }
+.mt-20{
+    margin-top: 20px;
+}
 .mt-15{
     margin-top: 15px;
 }
@@ -49,9 +52,25 @@ ul, ol, li{
     width: 100%;
     height: auto;
 }
-
+.text-center{
+    text-align: center;
+}
 .round-corner{
     border-radius: 5px;
+}
+.p-0{
+    padding: 0;
+}
+
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+
+figure{
+    position: relative;
 }
 
 .row::after{

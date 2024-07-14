@@ -1,5 +1,7 @@
 
 @import './_contact.css';
+@import url(./_nav.css);
+@import url(./_header.css);
 ul.menu li{
 display: inline;
 padding: 10px;
@@ -20,40 +22,49 @@ body{
     color: #fff;
     height: 40px;
 }
-.nav{
-    background-color: #efefef;
-    overflow: hidden;
+
+.card-body i{
+    font-size: 48px;
+    color: orangered;
 }
-.nav a {
-    float: right;
-    color: rgb(46,46,46);
-    text-align:center;
-    padding:14px 16px;
-    font-size:18px;
-}
-.nav a:hover{
-    border-bottom:2px solid red;
-}
-.active{
-    border-bottom:2px solid red;
+.card-body div{
+    
+    top:0;
+    right: 65px;
+    
 }
 
-.icon{
-    display: none;
+.card-body div a{
+    font-size: 18px;
+}
+.card-body div p{
+    position: absolute;
+    font-size: 16px;
+    top: 71%;
+    left: -4%;
+    transform: translate(-23%, 6%);
 }
 
+.card{
+    padding: 20px;
+    box-shadow: 1px 1px 1px 1px #656363;
+    
+}
 
-@media screen and (max-width:600px){
-    .nav a:not(:first-child){
-        display: none;
-    }
-    .nav a.icon{
-        display: block;
-        float: left;
-    }
-    .nav.responsive a{
-        display: block;
-        float: none;
-        text-align: right;
-    }
+.card .card-header .overlay{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition:opacity 1s ease-in;
+}
+.card-header img{
+    vertical-align: bottom;
+    
+}
+
+.card:hover .overlay{
+    opacity: 1;
 }
