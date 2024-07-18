@@ -48,6 +48,9 @@ ul, ol, li{
 .mt-15{
     margin-top: 15px;
 }
+.mt-50{
+    margin:50px;
+}
 .img-responsive{
     width: 100%;
     height: auto;
