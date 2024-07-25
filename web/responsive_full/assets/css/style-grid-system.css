@@ -49,7 +49,10 @@ ul, ol, li{
     margin-top: 15px;
 }
 .mt-50{
-    margin:50px;
+    margin-top:50px;
+}
+.mt-250{
+    margin-top:250px;
 }
 .img-responsive{
     width: 100%;
