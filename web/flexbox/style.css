@@ -38,13 +38,23 @@
 body{
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    
 }
 
 .container2{
     background-color: aqua;
     width: 600px;
     height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.test{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
 }
 
 
