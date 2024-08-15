@@ -1,0 +1,50 @@
+.black{
+    background-color: black;
+}
+
+.red{
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.container{
+    display: flex;
+    /* flex-wrap: wrap-reverse; */
+    margin-bottom: 10px;
+    /* flex-direction: row-reverse; */
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+    height: 500px;
+    /* align-items: baseline; */
+}
+
+.container > div{
+    /* background-color: #eb3b5a; */
+    width: 100px;
+    margin: 10px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 90px;
+    color: #fff;
+}
+
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container2{
+    background-color: aqua;
+    width: 600px;
+    height: 600px;
+}
+
+
