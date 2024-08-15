@@ -257,18 +257,29 @@ body{
 
 .faq-left-side .tab-label::after{
     content: '\276f';
-    width: 16px;
-    height: 16px;
+    /* width: 16px;
+    height: 16px; */
     text-align: center;
     float: left;
+    color: orangered;
+    transition: 0.5s;
+    font-size: 18px;
 }
 
 .faq-left-side .tab-content{
     height: 0;
     background-color: #6b6bff;
     transition: .2s ease-in;
+    overflow-y: scroll;
+    
+}
+.faq-left-side .tab-content p{
+    padding: 10px;
+}
+.faq-left-side input:checked ~ .tab-content{
+    height: 100px;
 }
 
-.faq-left-side input:checked ~ .tab-content{
-    height: 50px;
+.faq-left-side input:checked + label::after{
+    transform: rotate(-90deg);
 }
