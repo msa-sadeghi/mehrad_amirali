@@ -1,0 +1,17 @@
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100px 250px 100px 250px;
+    padding: 10px;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    grid-gap: 20px 10px;
+    justify-content: center;
+}
+
+.container > div {
+    padding:25px 0;
+    margin: 10px;
+    font-size: 28px;
+    background-color: #feca57;
+}
