@@ -1,0 +1,20 @@
+.container{
+    display: grid;
+    
+    padding: 10px;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    grid-gap: 20px 10px;
+    grid-template-areas: 'area area . . .' 'area area . . .';
+}
+
+.container > div {
+    padding:25px 0;
+    margin: 10px;
+    font-size: 28px;
+    background-color: #feca57;
+}
+
+.child1{
+    grid-area: area;
+}
