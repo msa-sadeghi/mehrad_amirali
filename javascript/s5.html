@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var fruits = ["apple", "banana", "lemon"];
+      console.log(typeof fruits);
+      console.log(fruits instanceof Array);
+      console.log(Array.isArray(fruits));
+      for (var i = 0; i < fruits.length; i++) {
+        console.log(fruits[i]);
+      }
+      fruits.forEach(function (value, index) {
+        console.log(`Hi ${value} ${index}`);
+      });
+    </script>
+  </body>
+</html>
