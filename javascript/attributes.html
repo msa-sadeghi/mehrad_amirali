@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="myDiv"
+      class="test-class"
+      data-developer="msa"
+      data-project-manager="other"
+    >
+      <input type="checkbox" checked test="atr" />
+    </div>
+  </body>
+  <script>
+    console.log(myDiv.childNodes[1].type);
+    console.log(myDiv.childNodes[1].getAttribute("test"));
+    myDiv.childNodes[1].setAttribute("new-atr", "my-atr");
+    myDiv.childNodes[1].setAttribute("new-atr", "my-atr2");
+
+    let input = myDiv.childNodes[1];
+    console.log(input.value);
+    input.value = "newVal";
+    console.log(input.value);
+    input.setAttribute("value", "newValue2");
+    console.log(input.value);
+    console.log(input.checked);
+    console.log(myDiv.dataset.developer);
+    console.log(myDiv.dataset.projectManager);
+  </script>
+</html>
