@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 200px;
+        border: 25px solid #e8c48f;
+        padding: 20px;
+        overflow: auto;
+      }
+      #circle {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        position: absolute;
+        border-radius: 100%;
+        top: 0;
+      }
+      .box div {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body style="text-align: center">
+    <hr />
+
+    <div id="circle"></div>
+    <p>شماره ۱</p>
+    <div id="example1" class="box">
+      <div>باکس ۱</div>
+      <div>باکس ۲</div>
+      <div>باکس ۳</div>
+      <div>باکس ۴</div>
+      <div>باکس ۵</div>
+    </div>
+    <script>
+      console.log(example1.getBoundingClientRect());
+      document.onmouseover = function (event) {
+        console.log(event);
+
+        let hoveredElem = document.elementFromPoint(event.pageX, event.pageY);
+        console.log(hoveredElem);
+      };
+    </script>
+  </body>
+</html>
