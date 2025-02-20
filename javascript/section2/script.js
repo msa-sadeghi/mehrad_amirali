@@ -52,19 +52,54 @@ var isMale = false;
 // alert(typeof y);
 // alert(isNaN(str1 + x));
 
-var userNumber = prompt("enter a number:");
-if (userNumber % 2 == 0) {
-  alert(`${userNumber} is even`);
-} else {
-  alert(`${userNumber} is odd`);
-}
-
+// var userNumber = prompt("enter a number:");
+// if (userNumber % 2 == 0) {
+//   alert(`${userNumber} is even`);
+// } else {
+//   alert(`${userNumber} is odd`);
+// }
 
 // سن کاربر را دریافت کنید.
 // اگر سن کاربر کمتر از 18 بود، به او پیغام "شما مجاز به ورود نیستید" را نمایش بدهید
 //  و در غیر این صورت پیغام "ورود به پنل" را نمایش بدهید.
 
-
 // دو عدد را از کاربر دریافت کرده و عدد اول را به توان دومی برسانید و حاصل را نمایش دهید
 
 //یک زمان را بر حسب دقیقه از کاربر دریافت کرده و آن را به ساعت تبدیل کنید و سپس نمایش دهید
+
+// var userName = document.getElementById("username");
+// var submitButton = document.getElementsByName("submit")[0];
+
+// submitButton.onclick = function (event) {
+//   console.log(userName.value);
+// };
+
+// var text = "I Love Javascript and react";
+
+// console.log(text.slice(7, 17));
+// console.log(text.substr(7, 10));
+// console.log(text.substring(17, 7));
+
+var x = Math.random() * 100000;
+console.log(Math.floor(x));
+
+// در مورد تفاوت های حالتی که -- و ++ پشت یا مقابل متغیر قرار می گیرند، سرچ و مطالعه کنید
+
+// x++
+// ++x
+
+// ﻿اعداد زوج بین 0 تا 100 را در کنسول چاپ کنید
+
+var name = "blalal";
+//   0 b
+//  1 l
+// 2 a
+
+// ﻿از کاربر 5 عدد را دریافت کرده و میانگین آن ها را به کاربر نمایش دهید
+
+
+// ﻿عددی را از کاربر دریافت کرده و سپس مجموع رقم های آن را محاسبه کنید.
+
+// :به عنوان مثال برای عدد 142 به صورت زیر محاسبه می شود
+
+// 1 + 4 + 2 = 7
