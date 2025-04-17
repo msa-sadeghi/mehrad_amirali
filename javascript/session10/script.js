@@ -1,6 +1,6 @@
 let citiesData = {
     tehran:{
-        city: 'Tehran', temp:12, weather:'Sunny', humidity:23, windSpeed: 32
+        city: 'Tehran', temp:12, weather:'Sunny', humidity:23, windSpeed: 32, icon:'images/sunny.png'
     },
     shiraz:{
         city: 'Shiraz', temp:22, weather:'Sunny', humidity:33, windSpeed: 30
@@ -15,6 +15,8 @@ searchBtn.addEventListener('click', function(){
     let mainCityData = citiesData[searcgBarValue]
     console.log(mainCityData)
     document.querySelector('.weather').classList.remove('loading')
+    document.querySelector('.icon').src = ""
+    document.querySelector('.city').innerHTML ="Weather in " + mainCityData.city
 
 
 
