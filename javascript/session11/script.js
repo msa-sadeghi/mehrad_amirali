@@ -38,12 +38,25 @@
 //     event.preventDefault(); // Prevent the form from submitting
 // })
 
-let locationElem = document.querySelector("#location");
-let keyElem = document.querySelector("#key");
+// let locationElem = document.querySelector("#location");
 // let keyElem = document.querySelector("#key");
-document.body.addEventListener("keydown", function(event) {
-    starter.style.display = "none"
-    ascii.style.display = "flex"
-    locationElem.innerHTML = event.location;
-    keyElem.innerHTML = event.key;
-})
+// let keyElem = document.querySelector("#key");
+// document.body.addEventListener("keydown", function(event) {
+//     starter.style.display = "none"
+//     ascii.style.display = "flex"
+//     locationElem.innerHTML = event.location;
+//     keyElem.innerHTML = event.key;
+// })
+
+// let h1Elem = document.getElementById("title");
+// console.log(h1Elem.nodeName);
+// console.log(h1Elem.nodeType);
+
+let head3 = document.getElementById("head3");
+// console.log(head3.parentNode)
+// console.log(head3.parentElement)
+console.log(head3.previousElementSibling.nextElementSibling)
+
+let list = document.getElementById("list");
+console.log(list.childElementCount)
+console.log(list.children[2])
