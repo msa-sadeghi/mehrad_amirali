@@ -5,7 +5,25 @@ let allProducts = [
     {id:4, title:'Album 4', price:9, img:'./Images/Album 4.png', count:1},
 ]
 
+userbasket = []
+
 const shopItemsContainer = document.querySelector('.shop-items')
+const basketItemsContainer = document.querySelector('.cart-items')
+
+function addProductToBasketArray(product){
+    userbasket.push(product)
+    basketProductsGenerator(userbasket)
+    console.log(userbasket)
+}
+
+
+function basketProductsGenerator(userbasketArray){
+    basketItemsContainer.innerHTML = ''
+    
+}
+
+
+
 
 allProducts.forEach(function(product){
     let productContainer = document.createElement('div')
@@ -29,7 +47,9 @@ allProducts.forEach(function(product){
     let productAddButton = document.createElement('button')
     productAddButton.innerHTML = "Add To Card"
     productAddButton.className = 'btn btn-primary shop-item-button'
-
+    productAddButton.addEventListener('click', function(){
+        addProductToBasketArray(product)
+    })
     productDetailsContainer.append(productPriceSpan, productAddButton)
     productContainer.append(productTitleSpan, productImageElem, productDetailsContainer)
     shopItemsContainer.append(productContainer)
