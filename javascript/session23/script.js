@@ -116,22 +116,64 @@
 
 // console.log(names)
 
-let numbers = [1,2,3,4,5]
+// let numbers = [1,2,3,4,5]
 
-let name = "sara"
+// let name = "sara"
 
-let user = {
-    id: 1,
-    name: 'reza',
-    age: 20
-}
+// let user = {
+//     id: 1,
+//     name: 'reza',
+//     age: 20
+// }
 
-numbers.forEach(item => item * 2)
+// numbers.forEach(item => item * 2)
 
 // for(let property of numbers){
 //     console.log(property)
 // }
 
-for(let property in user){
-    console.log(user[property])
-}
+// for(let property in user){
+//     console.log(user[property])
+// }
+
+
+
+// function my(a,b, ...c){
+//     console.log(a,b)
+//     console.log(c)
+// }
+
+// my(1,2,3,4,5)
+
+
+
+// let username = 'admin'
+
+// console.log(username.padStart(10,"/"))
+// console.log(username.padEnd(6, '?'))
+
+// let size = '6'
+// console.log(size.padStart(2, '0'))
+
+
+// let phoneNumber = '0999999999'
+
+// let x = phoneNumber.slice(-4)
+// console.log(x)
+
+// let y = x.padStart(phoneNumber.length, '*')
+// console.log(y)
+
+// x= 1_000_000
+
+
+// let age = 18
+
+// age >= 18 ? console.log("valid") : console.log("invalid")
+// let age = 18
+// age >= 20 || console.log("valid")
+
+import count, { isLogin as login , userRegistration} from './func.js'
+console.log(count)
+console.log(login(1))
+console.log(userRegistration('artin', 25))
