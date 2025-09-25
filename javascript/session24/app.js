@@ -12,6 +12,7 @@ window.addEventListener("load", () => {
         // console.warn('Error', error)
     })
     db.addEventListener('success', (ev)=>{
+        db = ev.target.result
         // console.log('Success', ev.target.result)
     })
 
