@@ -1,0 +1,22 @@
+ul.menu li{
+display: inline;
+padding: 10px;
+line-height: 70px;
+}
+@font-face {
+    font-family: vazir;
+    src: url(./Vazirmatn-Light.woff2);
+}
+
+body{
+    font-family: vazir;
+}
+.card{
+    border: 1px solid #efefef;
+    padding: 10px;
+    font-size: 16px;
+}
+.card-header{
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 10px;
+}

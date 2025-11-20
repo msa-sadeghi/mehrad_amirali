@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="test()" id="myButton">clickMe</button>
+    <button id="myButton2">clickMe2</button>
+    <script>
+      "use strict";
+      let myBtn = document.getElementById("myButton2");
+      myBtn.onclick = test;
+
+      function test() {
+        console.log("Hello", this);
+      }
+
+      let testObject = {
+        name: "sara",
+        list: [1, 2, 3, 4, 5],
+        testFunc: function () {
+          //let myThis = this;
+          this.list.forEach(
+            function (elem) {
+              console.log(`${this.name} ${elem}`);
+            }.bind(this)
+          );
+        },
+      };
+      //testObject.testFunc();
+    </script>
+  </body>
+</html>

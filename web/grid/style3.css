@@ -1,0 +1,50 @@
+.container{
+    display: grid;
+    padding: 10px;
+    background-color: #efefef;
+    grid-template-areas: 
+    "menu menu menu menu menu menu menu menu menu menu menu menu"
+    "slider slider slider slider slider slider slider slider slider topic topic topic"
+    "random random random content content content content content content  sidebar sidebar sidebar "
+    "footer footer footer footer footer footer footer footer footer sidebar sidebar sidebar"
+    ;
+}
+
+.container > div {
+    padding:25px 0;
+    margin: 10px;
+    font-size: 28px;
+    /* background-color: #feca57; */
+    text-align: center;
+}
+
+.child1{
+    grid-area: menu;
+    background-color: aqua;
+}
+
+.child2 {
+    grid-area: topic;
+    background-color: blue;
+}
+.child3 {
+    grid-area: slider;
+    background-color: blueviolet;
+}
+
+.child4{
+    grid-area: sidebar;
+    background-color: yellow;
+}
+.child5{
+    grid-area: content;
+    background-color: orange;
+}
+.child6{
+    grid-area: random;
+    background-color: black;
+}
+.child7{
+    grid-area: footer;
+    background-color: orangered;
+}

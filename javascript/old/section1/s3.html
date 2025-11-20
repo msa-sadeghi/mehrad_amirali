@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var res = myFunc1(1, 2);
+      console.log(res);
+      function myFunc1(a, b) {
+        return a + b;
+      }
+      var myFunc2 = function (a, b) {
+        return a + b;
+      };
+      var res = myFunc2(1, 2);
+      console.log(res);
+
+      var age = prompt("enter your age");
+      var sayHi;
+      if (age > 18) {
+        sayHi = function () {
+          console.log("Hello");
+        };
+      } else {
+        sayHi = function () {
+          console.log("Hi");
+        };
+      }
+      sayHi();
+    </script>
+  </body>
+</html>
