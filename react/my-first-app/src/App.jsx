@@ -26,7 +26,7 @@ function App(){
     /> */}
 
     <ProductCard
-    title="لپ تاپ ایسوس"
+    
     price="80,000,000"
     image="https://www.asus.com/WebsitesBanner/US/banners/55bn9zdhrldb8ayt/55bn9zdhrldb8ayt-0_0_tablet_0_2X.webp?webp"
     inStock={true}

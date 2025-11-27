@@ -1,4 +1,4 @@
-function ProductCard({title, price, image, inStock}){
+function ProductCard({title="nothing", price, image, inStock}){
     return(
         <div style={{
             border:'2px solid #eee',
