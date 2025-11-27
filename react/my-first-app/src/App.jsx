@@ -1,5 +1,6 @@
 import Greeting from "./components/Greeting";
 import UserCard from "./components/UserCard";
+import ProductCard from "./components/ProductCard";
 function App(){
   
 
@@ -11,17 +12,30 @@ function App(){
     <Greeting name="ali"/>
     <Greeting name="nikan"/> */}
 
-    <UserCard
-    name="sara"
+    {/* <UserCard
+    name="مریم"
     email="sara@gmail.com"
     age={25}
     city="teh"
     />
     <UserCard
-    name="sara"
+    name="امیر"
     email="sara@gmail.com"
     age={25}
     city="teh"
+    /> */}
+
+    <ProductCard
+    title="لپ تاپ ایسوس"
+    price="80,000,000"
+    image="https://www.asus.com/WebsitesBanner/US/banners/55bn9zdhrldb8ayt/55bn9zdhrldb8ayt-0_0_tablet_0_2X.webp?webp"
+    inStock={true}
+    />
+    <ProductCard
+    title="لپ تاپ ایسر"
+    price="80,000,000"
+    image="https://www.asus.com/WebsitesBanner/US/banners/55bn9zdhrldb8ayt/55bn9zdhrldb8ayt-0_0_tablet_0_2X.webp?webp"
+    inStock={false}
     />
     </div>
   )
