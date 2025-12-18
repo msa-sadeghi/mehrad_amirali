@@ -1,12 +1,8 @@
-import Counter from "./components/Counter";
-import ToggleContent from "./components/ToggleContent"; 
-import NameInput from "./components/NameInput";
+import ColorPicker from "./components/ColorPicker";
 function App(){
   
   return(
-    // <Counter/>
-    // <ToggleContent/>
-    <NameInput/>
+    <ColorPicker/>
   )
 }
 
