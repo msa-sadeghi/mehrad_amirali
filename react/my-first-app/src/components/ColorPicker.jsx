@@ -1,8 +1,11 @@
 import { useState } from "react";
 
 function ColorPicker(){
-
+    const [color, setColor] = useState('')
     const colors = ["red", "green", "blue"]
+    const handleClick = (color) =>{
+        setColor(color)
+    }
     return(
         <div>
             <h2>select the color</h2>
@@ -23,18 +26,19 @@ function ColorPicker(){
                             border: '3px solid white'
                             
                         }}
+                        onClick={() => handleClick(c)}
                         />                      
                     ))
                 }
                 </div>
                
                 <div>
-                    <p>you selected :</p>
+                    <p>you selected : {color}</p>
                     <div
                     style={{
                         width:'200px',
                         height:'100px',
-                        backgroundColor : 'white'
+                        backgroundColor : color || 'white'
                         
                     }}
                     ></div>

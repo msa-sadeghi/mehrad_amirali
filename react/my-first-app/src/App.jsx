@@ -1,8 +1,8 @@
-import ColorPicker from "./components/ColorPicker";
+import LoginForm from "./components/LoginForm";
 function App(){
   
   return(
-    <ColorPicker/>
+    <LoginForm/>
   )
 }
 
