@@ -1,8 +1,8 @@
-import LoginForm from "./components/LoginForm";
+import TodoList from "./components/TodoList";
 function App(){
   
   return(
-    <LoginForm/>
+    <TodoList/>
   )
 }
 
