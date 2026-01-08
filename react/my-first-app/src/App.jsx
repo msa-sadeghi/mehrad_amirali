@@ -1,8 +1,10 @@
-import TodoList from "./components/TodoList";
+import PageTitle from "./components/PageTiltle";
+
+
 function App(){
   
   return(
-    <TodoList/>
+    <PageTitle/>
   )
 }
 
