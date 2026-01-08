@@ -2,14 +2,18 @@ import { useEffect, useState } from "react"
 
 function PageTitle(){
 
-    const [count, setCount] = useState(0)
+    const [user, setUser] = useState({})
     useEffect(()=>{
-        document.title =  `you clicked ${count} times`
-    })
+        fetch("https://jsonplaceholder.typicode.com/users/1")
+        .then(res => res.json())
+        .then(data => {
+            setUser(data)
+        })
+    }, [])
     return(
         <div>
-            <p>counter:{count}</p>
-            <button onClick={()=> setCount(count + 1)}>increase</button>
+            <p>name: {user.name}</p>
+            <p>{user.name}</p>
         </div>
     )
 }
