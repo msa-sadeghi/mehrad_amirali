@@ -1,10 +1,13 @@
-import PageTitle from "./components/PageTiltle";
+import UserProfile from "./components/UserProfile";
+
+
+
 
 
 function App(){
   
   return(
-    <PageTitle/>
+    <UserProfile/>
   )
 }
 
