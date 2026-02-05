@@ -4,10 +4,10 @@ function useFetch(url){
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
     useEffect(()=>{
-        console.log("____________________"+res)
+       
         fetch(url)
         .then(res => {
-            res.json()
+            return res.json()
         })
         .then(data => {
             console.log(data)
@@ -23,6 +23,7 @@ function useFetch(url){
 function UserList(){
     const {data, error} = useFetch('https://jsonplaceholder.typicode.com/users')
     if(error) return <p>error</p>
+    if(data == null) return <p>data is loading</p>
     return(
         <ul>
             {
