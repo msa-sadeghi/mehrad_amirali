@@ -6,13 +6,8 @@ function useFetch(url){
     useEffect(()=>{
        
         fetch(url)
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            console.log(data)
-            setData(data)
-        })
+        .then(res => res.json())
+        .then(data => setData(data))
         .catch(err => {
             setError(err)
         })
