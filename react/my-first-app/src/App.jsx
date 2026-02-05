@@ -1,10 +1,12 @@
-import UserList from "./components/UserList";
+import ToggleComponent from "./components/ToggleComponent";
+
 
 
 function App(){
   
   return(
-    <UserList/>
+    <ToggleComponent
+/>
   )
 }
 
