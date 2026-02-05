@@ -1,13 +1,10 @@
-import UserProfile from "./components/UserProfile";
-
-
-
+import UserList from "./components/UserList";
 
 
 function App(){
   
   return(
-    <UserProfile/>
+    <UserList/>
   )
 }
 
