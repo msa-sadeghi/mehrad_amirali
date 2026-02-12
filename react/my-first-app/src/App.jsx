@@ -1,11 +1,13 @@
-import ToggleComponent from "./components/ToggleComponent";
+import CounterBox from "./components/CounterBox";
+
+
 
 
 
 function App(){
   
   return(
-    <ToggleComponent
+    <CounterBox
 />
   )
 }
