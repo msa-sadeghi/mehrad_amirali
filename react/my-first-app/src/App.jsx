@@ -1,15 +1,11 @@
-import CounterBox from "./components/CounterBox";
 
-
-
+import Dashboard from "./Dashboard";
 
 
 function App(){
   
-  return(
-    <CounterBox
-/>
-  )
+  return <Dashboard/>
+
 }
 
 export default App;
