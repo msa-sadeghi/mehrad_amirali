@@ -1,27 +1,16 @@
-<!DOCTYPE html>
-<html lang="en" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page_title }}</title>
-    <style>
-        .card{
-            border-radius:12px;
-            border:1px solid red;
-            padding:15px;
-            margin:20px;
-        }
-    </style>
-</head>
-<body>
-    {% for article in articles %}
+{% extends "blog/base.html" %}
+{% block title %}
+{{page_title}}
+{% endblock title %}
+
+{% block body %}
+     {% for article in articles %}
         <div class="card">
             <h3>{{ article.title }}</h3>
         <div>
             {{article.content}}
         </div>
-        <a href="">مشاهده</a>
+        <a href="{% url 'blog:article_detail' article.id %}">مشاهده</a>
         </div>
     {% endfor %}
-</body>
-</html>
+{% endblock body %}
