@@ -1,10 +1,18 @@
-
-import Dashboard from "./Dashboard";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import ThemeProvider from "./components/ThemeProvider";
 
 
 function App(){
   
-  return <Dashboard/>
+  return (
+    <ThemeProvider>
+      <div>
+        <Header/>
+        <Main/>
+      </div>
+    </ThemeProvider>
+  )
 
 }
 
