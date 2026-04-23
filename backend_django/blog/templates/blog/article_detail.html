@@ -10,5 +10,10 @@
 <p>{{ article.content }}</p>
 <p>{{ article.author }}</p>
 <p>{{ article.category }}</p>
+<p>{{ article.views }}</p>
+{% for related_article in related_articles %}
+    <h3>{{ related_article.title }}</h3>
+    <p>{{ related_article.content }}</p>
+{% endfor %}
 {% endblock body %}
 
