@@ -10,7 +10,7 @@ function Login(){
         e.preventDefault()
         login(email, password)
         console.log("go to dashboard")
-        navigate("/dashboard")
+        navigate("/dashboard",{replace:true})
     }
 
     return(
