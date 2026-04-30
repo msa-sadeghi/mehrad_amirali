@@ -1,17 +1,41 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
-import UserProfile from "./components/UserProfile";
-import Home from "./components/Home";
+import { AuthProvider } from "./context/AuthContext";
+ 
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
+import Login from "./pages/Login";
+import AdminPanel from "./pages/AdminPanel";
+import ProtectedRoute from "./components/ProtectedRoute";
 function App(){
   return (
     
-      <div>
+      <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/user/:userId/:section?" element={<UserProfile/>}/>
+              <Route path="/" element={<Home />}/>
+              <Route path="/login" element={<Login />}/>
+              <Route path="/dashboard" element={
+                  <ProtectedRoute>
+
+                    <Dashboard/>
+                  </ProtectedRoute>
+              }/>
+              <Route path="/profile" element={
+                  <ProtectedRoute>
+
+                    <Profile/>
+                  </ProtectedRoute>
+              }/>
+              <Route path="/admin" element={
+                  <ProtectedRoute>
+
+                    <AdminPanel/>
+                  </ProtectedRoute>
+              }/>
           </Routes>
         </BrowserRouter>
-      </div>
+      </AuthProvider>
     
   )
 
