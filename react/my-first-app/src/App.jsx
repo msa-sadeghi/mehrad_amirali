@@ -4,9 +4,7 @@ import LoginForm from "./components/LoginForms";
 
 function App(){
   return (
-    
     <LoginForm/>
-    
   )
 
 }
