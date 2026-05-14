@@ -10,9 +10,10 @@ function LoginForm(){
         console.log(data)
     }
     return(
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
+        <form onSubmit={handleSubmit(onSubmit)} className="login-form">
+            <div className="form-group">
                 <input 
+                className="form-input"
                 {...register("email",{
                     required:"email field is nessessary",
                     pattern:{
@@ -23,11 +24,11 @@ function LoginForm(){
                 type="text" placeholder="email..." />
                 {errors.email && (<p>{errors.email.message}</p>)}
             </div>
-            <div>
-                <input type="password"
+            <div className="form-group">
+                <input type="password" className="form-input"
                 placeholder="password..." />
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" className="submit-btn">Login</button>
         </form>
     )
 }
